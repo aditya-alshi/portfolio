@@ -4,7 +4,9 @@ export const action = async ({ request }) => {
   try {
     const formData = await request.formData();
     const body = Object.fromEntries(formData);
-    const response = await fetch("http://localhost:5000/contactme", {
+    const url = 'https://portfolio-vivc.onrender.com/contactme'
+    // const url = "http://localhost:5000/contactme"
+    const response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
