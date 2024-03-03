@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // async..await is not allowed in global scope, must use a wrapper
-module.exports.main= async function main(name, email , message) {
+module.exports.main= async function main(name,email, message ) {
   // send mail with defined transport object
   const info = await transporter.sendMail({
     from: "combohollow@gmail.com", // sender address

@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 
-:root{
-  --orange : #e95a3e;
+:root {
+  --orange: #e95a3e;
   --dark--grey: #4B4B4B;
   --mid--grey: #6d7784;
   --light--grey: #aaaaaa;
@@ -11,133 +11,122 @@
 
   --dark--orange: #e95a3e;
   --dark--dark--grey: #dddddd;
-  --dark--mid--grey: #b2a597; 
-  --dark--light--grey: #888888; 
-  --dark--symbols--grey: #6d7784; 
+  --dark--mid--grey: #b2a597;
+  --dark--light--grey: #888888;
+  --dark--symbols--grey: #6d7784;
 
 }
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
-html{
+html {
   font-size: 62.5%;
   position: fixed;
-  left: 0;right: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   top: 0;
 }
 
-body{
-}
- 
-
-header *{
+header * {
   margin: 0;
   padding: 0;
 }
 
-header.dark--header--wrapper{
+header.dark--header--wrapper {
   background-color: black;
-  position: fixed;
-  top: 0;left: 0;right: 0;
-  font-size: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: fit-content;
   box-shadow: 0 0.5rem 0.5rem var(--dark--symbols--grey);
-  padding: 3rem;
   color: var(--dark--dark--grey);
 }
 
-
-header.header--wrapper{
+header.default--header--wrapper {
   background-color: white;
-  position: fixed;
-  top: 0;left: 0;right: 0;
-  font-size: 2rem;
+  box-shadow: 0 0.5rem 0.5rem var(--symbols--grey);
+}
+
+
+header.header--wrapper {
+  height: fit-content;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: fit-content;
-  box-shadow: 0 0.5rem 0.5rem var(--symbols--grey);
   padding: 3rem;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--light--grey);
 }
 
-header a.dark--my--name{
+header a.dark--my--name {
   color: var(--dark--dark--grey);
-  margin-left: 2rem;
-  font-size: 5rem;
 }
 
-header a.my--name{
+header a.default--my--name {
   color: var(--dark--grey);
-  margin-left: 2rem;
-  font-size: 5rem;
 }
 
-header nav.navbar{
+header a.my--name {
+  margin-left: 2rem;
+  font-size: 3rem;
+}
+
+header nav.navbar {
   margin-right: 3rem;
 }
 
-header nav a{
+header nav a {
   margin-left: 3rem;
 }
 
-header nav a:hover, header a.my--name:hover, header a.dark--my--name:hover{
+header nav a:hover,
+header a.my--name:hover,
+header a.dark--my--name:hover {
   color: var(--orange);
 }
 
-header .darkmode--toggle{
+header .darkmode--toggle {
   margin-left: auto;
   font-size: 2.3rem;
   cursor: pointer;
 }
 
-div.dark--the--main--wrapper{
+div.dark--the--main--wrapper {
   background-color: black;
-  color: var();
-  margin-top: 13.5rem;
-  padding-top: 3rem;
-  padding-left: 20rem;
-  padding-right: 20rem;
-  height: 82.6vh;
-  overflow-y: auto;
-  margin-bottom: 0.2rem;
 }
 
-div.the--main--wrapper{
-  margin-top: 13.5rem;
-  padding-top: 3rem;
-  padding-left: 20rem;
-  padding-right: 20rem;
-  height: 82.6vh;
-  overflow-y: auto;
-  margin-bottom: 0.2rem;
+div.the--main--wrapper {
+  height: 100vh;
 }
 
-footer.footer--wrapper{
+main {
+  margin: 3rem 10rem 0rem 10rem;
+}
+
+footer.footer--wrapper {
   width: 100%;
   font-size: 2rem;
   text-align: center;
   margin: 3rem 0;
 }
 
-.footer--icons{
+.footer--icons {
   font-size: 2.3rem;
   margin: .6rem;
   color: var(--mid--grey);
 }
 
-.footer--icons:hover{
+.footer--icons:hover {
   color: var(--orange);
 }
 
@@ -146,81 +135,170 @@ footer.footer--wrapper{
 
 
 
-div.all--projects{
+div.all--projects {
   border: 1px solid var(--light--grey);
   padding: 2rem;
   text-align: center;
 }
 
-div.all--projects h1{
+div.all--projects h1 {
   color: var(--orange);
   font-size: 2rem;
   text-decoration: underline;
   margin-bottom: 3rem;
 }
 
-img.project-thumbnails{
-  max-width: 90%;
+img.project-thumbnails {
+  width: 100%;
   max-height: 40rem;
 }
 
-img.project-thumbnails:hover{
+img.project-thumbnails:hover {
   outline: 1px solid var(--light--grey);
-  box-shadow: 0.06rem 0.06rem 0.4rem var(--symbols--grey),-0.06rem -0.06rem 0.4rem var(--symbols--grey);
+  box-shadow: 0.06rem 0.06rem 0.4rem var(--symbols--grey), -0.06rem -0.06rem 0.4rem var(--symbols--grey);
 }
 
-div.about--wrapper{
-  width: 68%;
+div.about--wrapper {
   margin: auto;
 }
 
-div.about--wrapper h1{
+div.about--wrapper h1 {
   color: var(--orange);
   font-size: 6.8rem;
 }
 
-div.about--wrapper p{
+div.about--wrapper p {
   color: var(--light--grey);
   font-size: 1.6rem;
 }
 
 
-div.contact--wrapper{
+div.contact--wrapper {
   color: var(--light--grey);
   width: 90%;
   margin: auto;
 }
 
-div.contact--wrapper h1{
+div.contact--wrapper h1 {
   color: var(--orange);
   font-size: 6.8rem;
 }
 
-div.contact--wrapper .contact--form .contact--form--elements{
+div.contact--wrapper .contact--form .contact--form--elements {
   min-width: 40em;
 }
 
-div.contact--wrapper .contact--form .contact--form--labels{
+div.contact--wrapper .contact--form .contact--form--labels {
   font-size: 1.5rem;
-  
+
 }
 
-div.contact--wrapper .contact--form .contact--form--inputs{
-  color:var(--dark--grey);
+div.contact--wrapper .contact--form .contact--form--inputs {
+  color: var(--dark--grey);
 }
 
-div.contact--wrapper .contact--form .contact--submit--button{
+div.contact--wrapper .contact--form .contact--submit--button {
   padding: 0.5rem 1.5rem;
   background-color: transparent;
   color: var(--light--grey);
   border: 0.1rem solid var(--mid--grey);
 }
 
-div.contact--wrapper .contact--form .contact--submit--button:hover{
+div.contact--wrapper .contact--form .contact--submit--button:hover {
   background-color: var(--orange);
   color: white;
 }
 
-div.contact--wrapper .contact--form .contact--submit--button:active{
+div.contact--wrapper .contact--form .contact--submit--button:active {
   opacity: 0.8;
+}
+
+
+@media (max-width : 800px) {
+
+  header.header--wrapper {
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  header.header--wrapper .my--name {
+    font-size: 2.5rem;
+    display: block;
+    text-align: center;
+    margin: 0;
+  }
+
+  header nav.navbar {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    margin-top: 2rem;
+  }
+
+  header nav.navbar a {
+    display: inline-block;
+    margin: 0 3rem;
+  }
+
+  header .darkmode--toggle {
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1.3rem;
+    top: 1rem;
+  }
+
+  main {
+    margin: 2rem 1rem 0rem 1rem;
+  }
+
+
+  div.about--wrapper {
+    margin: auto;
+    text-align: justify;
+    padding: 1rem;
+  }
+
+  div.about--wrapper h1 {
+    color: var(--orange);
+    font-size: 3.8rem;
+  }
+
+  div.about--wrapper p {
+    color: var(--light--grey);
+    font-size: 1rem;
+  }
+
+  div.contact--wrapper {
+    width: 100%;
+  }
+
+  div.contact--wrapper h1 {
+    color: var(--orange);
+    font-size: 3.8rem;
+  }
+
+  div.contact--wrapper .contact--form .contact--form--elements {
+    min-width: 100%
+  }
+
+  div.contact--wrapper .contact--form .contact--form--labels {
+    font-size: 1.5rem;
+  }
+
+  div.contact--wrapper .contact--form .contact--form--inputs {
+    padding: 0.6rem 0.5rem;
+  }
+
+  div.contact--wrapper .contact--form .contact--submit--button {
+    padding: 0.5rem 1.5rem;
+    background-color: transparent;
+    color: var(--light--grey);
+    border: 0.1rem solid var(--mid--grey);
+  }
+
 }

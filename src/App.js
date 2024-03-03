@@ -16,16 +16,23 @@ function App() {
       return toggle;
     });
   }
-
   return (
     <div
       data-testid="wrapper"
-      className={darkMode ? "dark--the--main--wrapper" : "the--main--wrapper"}
+      className={`the--main--wrapper ${
+        darkMode ? "dark--the--main--wrapper" : ""
+      }`}
     >
       <header
-        className={darkMode ? "dark--header--wrapper" : "header--wrapper"}
+        className={`header--wrapper ${
+          darkMode ? "dark--header--wrapper" : "default--header--wrapper"
+        }`}
       >
-        <Link className={darkMode ? "dark--my--name" : "my--name"}>
+        <Link
+          className={`my--name ${
+            darkMode ? "dark--my--name" : "default--my--name"
+          }`}
+        >
           Aditya Alshi
         </Link>
         {darkMode ? (

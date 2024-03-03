@@ -1,10 +1,10 @@
-import { Form, useActionData } from "react-router-dom";
+import { Form, useActionData, useNavigation } from "react-router-dom";
 
 export const action = async ({ request }) => {
   try {
     const formData = await request.formData();
     const body = Object.fromEntries(formData);
-    const url = 'https://portfolio-vivc.onrender.com/contactme'
+    const url = "https://portfolio-vivc.onrender.com/contactme";
     // const url = "http://localhost:5000/contactme"
     const response = await fetch(url, {
       method: "POST",
@@ -13,15 +13,17 @@ export const action = async ({ request }) => {
       },
       body: JSON.stringify(body),
     });
-    const message = await response.text();
-    return { message };
+    const status = await response.json();
+    document.querySelector(".contact--form").reset();
+    return { status };
   } catch (err) {
     return { err };
   }
 };
 
 export default function Contact() {
-  const actionData = useActionData();
+  let actionData = useActionData();
+  const navigation = useNavigation();
 
   return (
     <div className="contact--wrapper">
@@ -78,10 +80,10 @@ export default function Contact() {
         <br />
         <br />
         <button className="contact--submit--button" type="submit">
-          Mail Now
+          {navigation.state === "submitting" ? "Submitting..." : "Submit"}
         </button>
+        {actionData ? " " + actionData.status.message : ""}
       </Form>
-      {actionData ? actionData.message : "nothing"}
     </div>
   );
 }
