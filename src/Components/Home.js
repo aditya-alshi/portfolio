@@ -15,7 +15,7 @@ export default function Home() {
         />
       </a>
       <a
-        href="https://65ed6b0093097c3f65fe7df7--shop-whop.netlify.app/"
+        href="https://shop-whop.netlify.app/"
         rel="noopener noreferrer"
         target="_blank"
       >
